@@ -1,5 +1,6 @@
 import Usuario from './data/data.js'
 import express from 'express';
+var port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -45,6 +46,6 @@ app.get('/api/user', function(req,res) {
     }
 });
 
-app.listen(3000, function () {
-    console.log('App listening on port 3000!');
+app.listen(port, function () {
+    console.log('App listening on port '+port);
 });
