@@ -1,9 +1,11 @@
 import Usuario from './data/data.js'
 import express from 'express';
 var port = process.env.PORT || 3000;
+var cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 app.get('/api/registrar', function(req, res) {
     try {
         const email = req.query.email;
